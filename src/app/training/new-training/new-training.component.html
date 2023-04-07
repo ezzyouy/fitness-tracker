@@ -1,4 +1,5 @@
 <section class="new-training" fxLayout fxLayoutAlign="center">
+  <form (ngSubmit)="onStratTraining(f)" #f="ngForm">
   <mat-card fxFlex.xs="100%" fxFlex="400px">
     <mat-card-header fxLayoutAlign="center">
       <mat-card-title>Actions Buttons</mat-card-title>
@@ -6,7 +7,7 @@
     <mat-card-content fxLayoutAlign="center">
       <mat-form-field appearance="fill">
         <mat-label>Select Your Favorite Type </mat-label>
-        <mat-select>
+        <mat-select ngModel name="exercice" required="">
           <mat-option *ngFor="let ex of exercices" [value]="ex.id">{{ex.name }}</mat-option>
 
         </mat-select>
@@ -14,7 +15,8 @@
     </mat-card-content>
 
     <mat-card-actions fxLayoutAlign="center">
-      <button mat-button (click)="onStratTraining()">LIKE</button>
+      <button type="submit" mat-button [disabled]="f.invalid" >LIKE</button>
     </mat-card-actions>
   </mat-card>
+  </form>
 </section>
