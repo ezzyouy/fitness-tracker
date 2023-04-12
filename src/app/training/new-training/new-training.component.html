@@ -8,7 +8,7 @@
       <mat-form-field appearance="fill">
         <mat-label>Select Your Favorite Type </mat-label>
         <mat-select ngModel name="exercice" required="">
-          <mat-option *ngFor="let ex of exercices" [value]="ex.id">{{ex.name }}</mat-option>
+          <mat-option *ngFor="let ex of exercices " [value]="ex.id">{{ex.data.name }}</mat-option>
 
         </mat-select>
       </mat-form-field>
