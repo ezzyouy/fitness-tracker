@@ -25,6 +25,7 @@ import { AngularFireStorageModule } from 'angularfire2/storage'
 import { AngularFireAuthModule } from 'angularfire2/auth'
 
 import { firebase } from '../environments/firebase'
+import { UIService } from './shared/ui.service'
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import { firebase } from '../environments/firebase'
     AngularFireAuthModule,
     AngularFireStorageModule
   ],
-  providers: [AuthService, TrainingService],
+  providers: [AuthService, TrainingService, UIService],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponenet]
 })
